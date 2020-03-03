@@ -1,7 +1,20 @@
 <html>
-<title>tak było</title>
 <head> </head>
 <body>
-<div > </div>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="coinpaprika.js"></script>
+<script>
+    (async () => {
+        console.log(await cp.global());
+    })();
+</script> 
+<div class='001'> </div>
 </body>
 </html>
+<!-- https://api.coinpaprika.com/
+paginacja client-side
+pobieramy całą listę kryptowalut
+w tablicy z zastosowaną paginacją
+i po wybraniu wiersza żeby wyświetlało dodatkowe szczegóły na temat kryptowaluty
+fetch
+-->
