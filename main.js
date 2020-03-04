@@ -7,7 +7,7 @@ return fetch(url)
 })
 
 .catch(function(error) {
-    console.log('zjebalo sie na amen', error)
+    console.log('nie dziala =)', error)
 });
 
 }
