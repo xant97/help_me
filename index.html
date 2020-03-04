@@ -1,21 +1,33 @@
+<!DOCTYPE html>
 <html>
-<title>tak było	</title>
-<head> </head>
-<body>
-<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-<script src="coinpaprika.js"></script>
-<script>
-    (async () => {
-        console.log(await cp.global());
-    })();
-</script> 
-<div class='001'> </div>
-</body>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
+
+		<script src="main.js"></script>
+
+		<title>
+			Szymek 2k20
+		</title>
+	</head>
+
+	<body>
+		<div class="navbar bg-light">
+			<a class="navbar-brand" href="#">Szymek 2k20</a>
+		</div>
+		<div class="container">
+			<!-- Przykładowy wygląd pobranych danych -->
+			<div class="row">
+				<div class="input-group">
+					<select class="custom-select" id="select" aria-label="Example select with button addon">
+						<option selected>Choose...</option>				
+					</select>
+					<div class="input-group-append">
+						<button class="btn btn-outline-secondary" type="button" id="button">Button</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
 </html>
-<!-- https://api.coinpaprika.com/
-paginacja client-side
-pobieramy całą listę kryptowalut
-w tablicy z zastosowaną paginacją
-i po wybraniu wiersza żeby wyświetlało dodatkowe szczegóły na temat kryptowaluty
-fetch
--->
