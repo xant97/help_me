@@ -5,7 +5,7 @@
         var exports = window.cp = {};
     }
     const instance = axios.create( {
-        baseURL: 'https://api.coinpaprika.com/v1',
+        baseURL: 'https://api.coinpaprika.com/v1/users?role=admin&status=active',
         headers: typeof window !== 'undefined' ? {} : {
             'User-Agent': 'coinpaprika-js'
         },
