@@ -1,51 +1,25 @@
- /*
- function myFunction() {
-  var node = document.createElement("option");
-  var textnode = document.createTextNode(getCoins());
-  node.appendChild(textnode);
-  document.getElementById("select").appendChild(node);
-} 
-function getCoins(){
+function createNode(element){
+	return document.createElement(element); 
+							}
 
-var url = new Request('https://api.coinpaprika.com/v1/coins/btc-bitcoin');
-return fetch(url)
-.then(response => response.json())
-
-.then(function(data) {
-let nomnom = data;
-return nomnom.map(function(ree){
-	let option = myFunction();
-	option.innerHTML = `{ree.id}`;
-	append(option, select);
-})
-})
-
-.catch(function(error) {
-    console.log('nie dziala =)', error)
-})
-
-}
-
-console.log(getCoins());
-*/
-function myFunction() {
-  var node = document.createElement("option");
-  var textnode = document.createTextNode();
-  node.appendChild(textnode);
-  document.getElementById("select").appendChild(node);
-} 
-
-//przykladowa obsluga, mozesz tu zrobic appenda
+function append(parent, el){
+	return parent.appendChild(el);
+							}
+  
+const ul = document.getElementById('select');
 var url = 'https://api.coinpaprika.com/v1/coins/';
 let coinList = fetch(url).then((response) => response.json())
-.then(function(data) {
-  //tu xD
-  
-  for (i = 0; i < 15/*data.length*/; i++) { 
-    console.log(data[i].id); 
-} 
-  //console.log(data[0].id);
-})
+.then(function siema(data) {
+let i = 0;
+  for( i; i<15; i++){
+	let niewiem = data[i].id,
+		option = createNode('option'),
+		li = createNode('li');
+		option.innerHTML = niewiem;
+			append(li, option);
+			append(ul, option);
+					}
+						})
 .catch(function(error) {
   console.log(error);
 }); 
