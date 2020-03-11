@@ -27,6 +27,13 @@ return nomnom.map(function(ree){
 }
 
 console.log(getCoins());
+
+function myFunction() {
+  var node = document.createElement("option");
+  var node2 = document.createNode();
+  node.appendChild(node2);
+  document.getElementById("select").appendChild(node);
+} 
 */
 function myFunction() {
   var node = document.createElement("option");
