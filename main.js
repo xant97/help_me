@@ -1,5 +1,8 @@
+let counter = 0;
 function createNode(element){
-	return document.createElement(element); 
+	xd =  document.createElement(element); 
+	xd.id = (counter++)/2; // nie mma pojecia dlaczego /2 XD //edit: w sumie to sie domyslam
+	return xd;
 							}
 function append(parent, el){
 	return parent.appendChild(el);
@@ -19,12 +22,12 @@ let i = 0;
 			append(ul, option);
 				
 button.onclick = function testr(){
-let dd = ul.options[ul.selectedIndex].value;
-	//if(dd = 1){
-	alert(dd); // alert(dd); dziala ale to nie o to chodzi
+//let dd = ul.options[ul.selectedIndex].value;
+	if(option.id = '2' ){
+	alert('dziala'); // alert(dd); dziala ale to nie o to chodzi
 	}
-//else alert('tu wklej przykre slowa');
-//}
+else alert('tu wklej przykre slowa');
+}
 }
 						})
 .catch(function(error) {
